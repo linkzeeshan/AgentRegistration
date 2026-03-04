@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MkTechSys.AgentRegistrationForm.slnx
+/MkTechSys.AgentRegistrationForm/bin/Debug/net10.0
+/MkTechSys.AgentRegistrationForm/obj/Debug/net10.0
+/MkTechSys.AgentRegistrationForm/obj
+/CONFIGURATION.md
+/DEPLOYMENT.md
+*.md

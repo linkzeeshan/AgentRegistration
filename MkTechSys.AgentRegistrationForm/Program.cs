@@ -1,7 +1,12 @@
+using MkTechSys.AgentRegistrationForm.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register Azure Blob Storage service
+builder.Services.AddSingleton<IAgentRegistrationStorageService, AgentRegistrationBlobCsvService>();
 
 var app = builder.Build();
 
