@@ -108,15 +108,17 @@
             background: white;
             padding: 3rem;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             overflow-y: auto;
             height: 100vh;
+            padding-top: 4rem;
         }
 
         .form-card {
             width: 100%;
             max-width: 500px;
+            padding-top: 1rem;
         }
 
         .form-title {
@@ -220,47 +222,105 @@
             gap: 0.5rem;
         }
 
+        /* Tablet and below - Stack layout */
         @@media (max-width: 968px) {
             .registration-container {
                 grid-template-columns: 1fr;
+                min-height: auto;
             }
 
             .hero-section {
-                min-height: 50vh;
+                min-height: 40vh;
+                max-height: 40vh;
             }
 
-            .hero-overlay {
-                padding: 2rem;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
+            .hero-img-full {
+                height: 40vh;
             }
 
             .form-section {
                 padding: 2rem 1.5rem;
+                padding-top: 3rem;
+                height: auto;
+                min-height: 60vh;
+                align-items: flex-start;
+            }
+
+            .form-card {
+                max-width: 600px;
+                padding-top: 0;
             }
         }
 
+        /* Mobile devices */
         @@media (max-width: 576px) {
-            .hero-overlay {
-                padding: 1.5rem;
+            body {
+                overflow-y: auto;
             }
 
-            .hero-title {
-                font-size: 2rem;
+            .registration-container {
+                height: auto;
             }
 
-            .hero-badge {
-                font-size: 0.9rem;
+            .hero-section {
+                min-height: 30vh;
+                max-height: 30vh;
             }
 
-            .hero-subtitle {
-                font-size: 0.9rem;
+            .hero-img-full {
+                height: 30vh;
             }
 
             .form-section {
-                padding: 1.5rem 1rem;
+                padding: 2rem 1rem;
+                padding-top: 2.5rem;
+                height: auto;
+            }
+
+            .form-title {
+                font-size: 1.75rem;
+            }
+
+            .form-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.25rem;
+            }
+
+            .form-control {
+                padding: 0.65rem 0.85rem;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+
+            .btn-submit {
+                padding: 0.85rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Small mobile devices */
+        @@media (max-width: 375px) {
+            .hero-section {
+                min-height: 25vh;
+                max-height: 25vh;
+            }
+
+            .hero-img-full {
+                height: 25vh;
+            }
+
+            .form-section {
+                padding: 1rem 0.75rem;
+            }
+
+            .form-title {
+                font-size: 1.5rem;
+            }
+
+            .form-control {
+                padding: 0.6rem 0.75rem;
             }
         }
     </style>
